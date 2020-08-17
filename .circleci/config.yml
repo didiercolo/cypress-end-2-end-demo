@@ -6,10 +6,3 @@ workflows:
     jobs:
       - cypress/run:
           record: true
-  nightly:
-    triggers:
-      - schedule:
-          cron: "*/3 * * * *"
-    jobs:
-      - cypress/run:
-          record: true
