@@ -7,7 +7,7 @@ workflows:
       - cypress/run:
           record: true
   nightly:
-   triggers:
+    triggers:
       - schedule:
           cron: "*/3 * * * *"
           filters:
