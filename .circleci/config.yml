@@ -2,7 +2,20 @@ version: 2.1
 orbs:
   cypress: cypress-io/cypress@1
 workflows:
-  build:
+  version: 2
+  commit:
+    jobs:
+      - cypress/run:
+          record: true
+  nightly:
+    triggers:
+      - schedule:
+          cron: "0 0 * * *"
+          filters:
+            branches:
+              only:
+                - master
+                - beta
     jobs:
       - cypress/run:
           record: true
