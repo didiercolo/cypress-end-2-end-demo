@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "cy:open":"cypress open",
-    "cy:run:dashboard":"cypress run --record --key c8444adb-afed-4ce4-b8ca-a957d85c9ad9"
+    "cy:open": "cypress open",
+    "cy:run:dashboard": "cypress run --record --key c8444adb-afed-4ce4-b8ca-a957d85c9ad9"
   },
   "repository": {
     "type": "git",
