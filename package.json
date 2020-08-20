@@ -20,6 +20,6 @@
   },
   "homepage": "https://github.com/didiercolo/cypress-end-2-end-demo#readme",
   "dependencies": {
-    "cypress": "^4.12.1"
+    "cypress": "^5.0.0"
   }
 }

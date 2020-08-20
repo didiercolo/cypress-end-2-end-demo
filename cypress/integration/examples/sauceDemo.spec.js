@@ -2,6 +2,7 @@
 
 import {selectors as login}   from '../../selectors/login'
 import {selectors as product}   from '../../selectors/products'
+import {selectors as checkout}   from '../../selectors/checkout'
 
 const loginInput = '[data-test="username"]';
 const passwordInput = '[data-test="password"]';
@@ -45,23 +46,24 @@ context('End 2 End - Sauce Demo', () => {
   it('Continue to shopping Card', () => {
     cy.get(product.shoppingCartButton).should('be.visible') 
     cy.get(product.shoppingCartButton).click()
-    cy.get('.checkout_button').should('be.visible')
+    cy.get(checkout.checkoutButton).should('be.visible')
   })
 
   it('Continue to checkout', () => {
-    cy.get('.checkout_button').click()
-    cy.get('.checkout_info_wrapper').should('be.visible')
+    cy.get(checkout.checkoutButton).click()
+    cy.get(checkout.checkOutWrapper).should('be.visible')
   })
 
   it('Enter checkout info', () => {
-    cy.get('#first-name').type('Automated')
-    cy.get('#last-name').type('Automated')
-    cy.get('#postal-code').type('33122')
-    cy.get('.cart_button').click()
+    cy.get(checkout.firstName).type('Automated')
+    cy.get(checkout.lastName).type('Automated')
+    cy.get(checkout.zipCode).type('33122')
+    cy.get(checkout.cartButton).click()
   })
 
   it('Finish order', () => {
-    cy.get('.cart_button').click()
+    cy.get(checkout.cartButton).click()
+    cy.get(checkout.checkOutCompleteImage).should('be.visible')
   })
 
 })
