@@ -4,11 +4,6 @@ import {selectors as login}   from '../../selectors/login'
 import {selectors as product}   from '../../selectors/products'
 import {selectors as checkout}   from '../../selectors/checkout'
 
-const loginInput = '[data-test="username"]';
-const passwordInput = '[data-test="password"]';
-const loginButton =  '#login-button';
-const loginErrorMessage = '[data-test="error"]'
-
 context('End 2 End - Sauce Demo', () => {
   before(() => {
     cy.viewport('macbook-15')
